@@ -1,0 +1,70 @@
+/* Coin balans — oltin karta */
+.coin-card {
+  background: var(--gold-grad); color: #4a2e00; border-radius: var(--radius-lg);
+  padding: 20px; box-shadow: 0 12px 30px rgba(247,183,51,.35); position: relative; overflow: hidden;
+}
+.coin-card::after {
+  content: ''; position: absolute; width: 180px; height: 180px; border-radius: 50%;
+  background: rgba(255,255,255,.18); top: -70px; right: -40px;
+}
+.coin-actions { display: flex; gap: 10px; margin-top: 18px; position: relative; z-index: 1; }
+.coin-btn {
+  flex: 1; display: flex; align-items: center; justify-content: center; gap: 7px;
+  padding: 11px; border-radius: 12px; font-weight: 700; font-size: 14px;
+  background: rgba(255,255,255,.85); color: #7a4a00;
+}
+
+/* News */
+.news-card { display: flex; gap: 14px; padding: 14px; align-items: stretch; }
+.news-thumb { width: 56px; height: 56px; border-radius: 14px; display: grid; place-items: center; flex-shrink: 0; }
+
+/* Course cards */
+.course-card { display: flex; flex-direction: column; align-items: flex-start; }
+.course-badge {
+  width: 46px; height: 46px; border-radius: 12px; color: #fff; font-weight: 800;
+  display: grid; place-items: center; font-size: 15px;
+}
+
+/* Attendance calendar */
+.cal { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+.cal-cell {
+  aspect-ratio: 1; border-radius: 10px; display: grid; place-items: center;
+  font-size: 13px; font-weight: 700;
+}
+.cal-cell.present { background: var(--green-bg); color: var(--green); }
+.cal-cell.absent { background: var(--red-bg); color: var(--red); }
+.cal-cell.empty { background: var(--surface-2); color: var(--text-3); font-weight: 500; }
+
+/* Lessons */
+.module { margin-bottom: 16px; }
+.module-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-weight: 800; }
+.lesson-row {
+  display: flex; align-items: center; gap: 14px; padding: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.lesson-row:last-child { border-bottom: none; }
+.lesson-ico { width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center; flex-shrink: 0; }
+
+/* Ranking */
+.rank-row { display: flex; align-items: center; gap: 14px; padding: 13px 16px; border-bottom: 1px solid var(--border); }
+.rank-row:last-child { border-bottom: none; }
+.rank-row.me { background: rgba(109,93,252,.07); }
+.rank-num { width: 30px; text-align: center; font-weight: 800; color: var(--text-3); }
+.rank-num.top { color: var(--brand); }
+.podium { display: flex; align-items: flex-end; justify-content: center; gap: 12px; padding: 10px 0 22px; }
+.podium-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.podium-bar { width: 78px; border-radius: 12px 12px 0 0; display: grid; place-items: end center; padding-bottom: 8px; color: #fff; font-weight: 800; }
+
+/* Profile */
+.prof-header { display: flex; align-items: center; gap: 16px; }
+.tabs { display: flex; gap: 6px; background: var(--surface-2); padding: 5px; border-radius: 14px; margin: 18px 0; }
+.tab { flex: 1; padding: 10px; border-radius: 10px; font-weight: 600; font-size: 13.5px; color: var(--text-2); transition: all .12s ease; }
+.tab.active { background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
+
+.skill-group { margin-bottom: 18px; }
+.skill-group-label { font-weight: 700; font-size: 14px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.opt-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.tip-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px dashed var(--border); }
+.tip-row:last-child { border-bottom: none; }
+.tip-delta { font-weight: 800; color: var(--green); white-space: nowrap; }

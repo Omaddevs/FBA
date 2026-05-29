@@ -1,0 +1,40 @@
+.login { min-height: 100vh; display: grid; grid-template-columns: 1.1fr 1fr; }
+
+.login-art {
+  background: var(--brand-grad); color: #fff; position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center; padding: 40px;
+}
+.login-art::before {
+  content: ''; position: absolute; width: 520px; height: 520px; border-radius: 50%;
+  background: rgba(255,255,255,.12); top: -160px; right: -160px;
+}
+.login-art::after {
+  content: ''; position: absolute; width: 360px; height: 360px; border-radius: 50%;
+  background: rgba(255,255,255,.1); bottom: -120px; left: -100px;
+}
+.login-art-inner { position: relative; z-index: 1; max-width: 380px; }
+.login-art h1 { font-size: 34px; font-weight: 800; margin: 22px 0 10px; }
+.login-tagline { font-size: 16px; opacity: .92; line-height: 1.5; }
+.login-pillars { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
+.pillar {
+  display: flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px;
+  background: rgba(255,255,255,.16); font-weight: 600; font-size: 14px; backdrop-filter: blur(4px);
+}
+
+.login-form-wrap { display: flex; align-items: center; justify-content: center; padding: 32px; }
+.login-form { width: 100%; max-width: 380px; }
+.login-form h2 { font-size: 26px; font-weight: 800; margin-bottom: 4px; }
+
+.role-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 8px 0 20px; }
+.role-pill {
+  padding: 9px 8px; border-radius: 10px; font-size: 12.5px; font-weight: 600;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text-2); transition: all .12s ease;
+}
+.role-pill:hover { border-color: var(--brand); color: var(--brand); }
+.role-pill.active { background: var(--brand); color: #fff; border-color: var(--brand); }
+
+@media (max-width: 860px) {
+  .login { grid-template-columns: 1fr; }
+  .login-art { display: none; }
+  .login-form-wrap { min-height: 100vh; padding: 24px 20px; }
+}
